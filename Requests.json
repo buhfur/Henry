@@ -1,0 +1,25 @@
+{
+
+    "web_commands": [
+          "henry i need something looked up",
+          "henry i need you to find some information for me",
+          "internet search",
+          "is there any wikipedia articles related to my search",
+          "any news about that",
+          "henry can you look something up for me"
+        ],
+
+      "storage_commands" : [
+        "henry i ne"
+
+      ],
+
+      "email_commands" : [
+
+      ],
+
+      "download_commands" : [
+
+      ]
+
+}
