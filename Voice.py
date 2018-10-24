@@ -38,7 +38,7 @@ class Talk:
             self.user_speak.Speak("sure, no problem!")
         #misc requests
 
-        elif request == "who are you":
+        elif request == "who are you" or request == "Henry who are you" or request == "who are you henry" :
             self.user_speak.Speak("my name is henry, your personal assistant for learning computer science and software engineering.")
 
         elif request == "Henry who made you" or request == "who made you":
