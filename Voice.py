@@ -44,12 +44,24 @@ class Talk:
         elif request == "Henry who made you" or request == "who made you":
             self.user_speak.Speak("i was created by Ryan Michael McVicker on the date of october 22nd 2018")
 
-        elif request == "what is your purpose" or request == "Henry what is your purpose":
+        elif request == "what is your purpose" or request == "Henry what is your purpose" or request == "and your purpose" or "Henry state your purpose":
             self.user_speak.Speak("my purpose is to assist you in learning computer science. and software engineering")
 
         elif request == "Henry shut down" or request == "Henry turn off" or request == "shut down":
             self.user_speak.Speak("okay, good bye!")
             sys.exit()
+
+        elif request == "what can you do" or request == "what sort of things can you do" or request == "what are your features" or request == "what are some of the things you can do":
+            self.user_speak.Speak()
+
+        elif request == "Henry" or request == "uh Henry" or request == "hey Henry":
+            self.user_speak.Speak("yes? what can i do for you")
+
+        else:
+            self.user_speak.Speak("im sorry sir, but i couldent understand that")
+
+
+
 
         #else:
         #    self.user_speak.Speak("im sorry, i didnt understand that")
