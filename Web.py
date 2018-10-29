@@ -19,7 +19,7 @@ class Web:
     def search_google(self, query):
         #make a google query
         self.query = query
-        self.search = search(self.query, start=0, stop=10, num=10, safe='on')
+        self.search = search(self.query, start=0, stop=10, num=10)
         return self.search
 
     #creates a directory, then downloads the pdfs
@@ -36,7 +36,7 @@ class Web:
                 #default dir for pdfs is C:\HenryPDF
                 self.dir = os.mkdir("HenryPDf")
 
-            #throws exception for unittests 
+            #throws exception for unittests
             except IOError:
                 return "FAILED TO CREATE HenryPDF"
 
