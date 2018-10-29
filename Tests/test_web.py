@@ -21,8 +21,8 @@ class TestWeb(unittest.TestCase):
         #create a test directory for the test files to be put in
         test_query = Web.search_google("research paper pdf")
         #use test_query
-        test_find = Web.find_pdf(test_query)
-
+        test_find = Web.find_pdf(test_query, file_path=os.cwdir())
+        
 
 
 if __name__ == '__main__':

@@ -51,6 +51,8 @@ class Web:
 
         results = [result for x in search_results]
         #SOME OF THIS CODE WAS TAKEN FROM https://www.codementor.io/aviaryan/downloading-files-from-urls-in-python-77q3bs0un
+
+
         for url in results:
             #download the pdf and add them to the directory
             r = requests.get(url, allow_redirects=True)
@@ -60,6 +62,10 @@ class Web:
             with open(split_url[-1], "wb") as pdf_file:
                 pdf_file.write(r.content)
                 #henry should be asked to open a specific one
+                """
+                OPEN WEB BROWSER OR EDITOR TO VIEW PDF
+                """
+                
 
 
 
@@ -67,6 +73,7 @@ class Web:
     def open_pdf(self, file_path=None):
 
         file_path = file_path or None
+        #attempt to open the pdf
 
 
 
@@ -74,4 +81,4 @@ class Web:
 
 
     def find_documentation(self, subject):
-        return
+        pass
