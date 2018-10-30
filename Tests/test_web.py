@@ -22,7 +22,10 @@ class TestWeb(unittest.TestCase):
         test_query = Web.search_google("research paper pdf")
         #use test_query
         test_find = Web.find_pdf(test_query, file_path=os.cwdir())
-        
+        self.assertTrue()
+
+    
+
 
 
 if __name__ == '__main__':

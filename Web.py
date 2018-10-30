@@ -1,5 +1,6 @@
 import win32com.client as wincl
 import requests
+import webbrowser
 from bs4 import BeautifulSoup
 #ryan mcvicker
 
@@ -62,19 +63,23 @@ class Web:
             with open(split_url[-1], "wb") as pdf_file:
                 pdf_file.write(r.content)
                 #henry should be asked to open a specific one
-                """
-                OPEN WEB BROWSER OR EDITOR TO VIEW PDF
-                """
-                
 
 
 
 
-    def open_pdf(self, file_path=None):
 
+
+    def open_pdf(self,url):
+        #use the web browser module to open the urls
         file_path = file_path or None
-        #attempt to open the pdf
+        #how to open downloaded pdf???
+        if not file_path:
+            return "you must have a file path to open a pdf"
 
+        #how to open pdf with a web browser
+
+
+        webbrowser.open(r"file://C:\Henry\HenryPDF\{}".format(url))
 
 
 
