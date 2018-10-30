@@ -1,5 +1,6 @@
 import win32com.client as wincl
 import requests
+import webbrowser
 from bs4 import BeautifulSoup
 #ryan mcvicker
 
@@ -19,7 +20,7 @@ class Web:
     def search_google(self, query):
         #make a google query
         self.query = query
-        self.search = search(self.query, start=0, stop=10, num=10, safe='on')
+        self.search = search(self.query, start=0, stop=10, num=10)
         return self.search
 
     #creates a directory, then downloads the pdfs
@@ -36,7 +37,7 @@ class Web:
                 #default dir for pdfs is C:\HenryPDF
                 self.dir = os.mkdir("HenryPDf")
 
-            #throws exception for unittests 
+            #throws exception for unittests
             except IOError:
                 return "FAILED TO CREATE HenryPDF"
 
@@ -51,6 +52,8 @@ class Web:
 
         results = [result for x in search_results]
         #SOME OF THIS CODE WAS TAKEN FROM https://www.codementor.io/aviaryan/downloading-files-from-urls-in-python-77q3bs0un
+
+
         for url in results:
             #download the pdf and add them to the directory
             r = requests.get(url, allow_redirects=True)
@@ -64,14 +67,23 @@ class Web:
 
 
 
-    def open_pdf(self, file_path=None):
 
+
+    def open_pdf(self,url):
+        #use the web browser module to open the urls
         file_path = file_path or None
+        #how to open downloaded pdf???
+        if not file_path:
+            return "you must have a file path to open a pdf"
 
+        #how to open pdf with a web browser
+
+
+        webbrowser.open(r"file://C:\Henry\HenryPDF\{}".format(url))
 
 
 
 
 
     def find_documentation(self, subject):
-        return
+        pass
